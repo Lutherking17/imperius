@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="produc.css"
+    <title>Barbería</title>
+    
+    <script>
+        function toggleSection(id) {
+            var section = document.getElementById(id);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="section">
+        <button onclick="toggleSection('hair-products')">Productos para el cabello</button>
+        <div id="hair-products" class="product-list">
+            <div class="product" data-price="20">
+                <img src="ruta/a/tu/imagen/gel-blu.jpg" alt="Imagen de Gel blu" style="width:100px; height:auto;">
+                <p>Gel blu- S/ 20</p>
+                <button onclick="addToCart('Gel blu', 20)">Agregar al Carrito</button>
+            </div>
+            <div class="product" data-price="30">
+                <img src="ruta/a/tu/imagen/shampu-anticaspa.jpg" alt="Imagen de Shampu anticaspa" style="width:100px; height:auto;">
+                <p>Shampu anticaspa - S/ 30</p>
+                <button onclick="addToCart('Shampu anticaspa', 30)">Agregar al Carrito</button>
+            </div>
+            <!-- Agrega más productos para el cabello aquí -->
+        </div>
+    </div>
+    
+    <div class="section">
+        <button onclick="toggleSection('beard-products')">Productos para la barba</button>
+        <div id="beard-products" class="product-list">
+            <div class="product" data-price="35">
+                <img src="ruta/a/tu/imagen/aceite-barba.jpg" alt="Imagen de Aceite para barba" style="width:100px; height:auto;">
+                <p>Aceite para barba - S/ 35</p>
+                <button onclick="addToCart('Aceite para barba', 35)">Agregar al Carrito</button>
+            </div>
+            <div class="product" data-price="40">
+                <img src="ruta/a/tu/imagen/balsamo-barba.jpg" alt="Imagen de Bálsamo para barba" style="width:100px; height:auto;">
+                <p>Bálsamo para barba - S/ 40</p>
+                <button onclick="addToCart('Bálsamo para barba', 40)">Agregar al Carrito</button>
+            </div>
+            <!-- Agrega más productos para la barba aquí -->
+        </div>
+    </div>
+    
+    <div class="section">
+        <button onclick="toggleSection('shaving-products')">Productos de afeitado</button>
+        <div id="shaving-products" class="product-list">
+            <div class="product" data-price="15">
+                <img src="ruta/a/tu/imagen/espuma-afeitar.jpg" alt="Imagen de Espuma para afeitar" style="width:100px; height:auto;">
+                <p>Espuma para afeitar - S/ 15</p>
+                <button onclick="addToCart('Espuma para afeitar', 15)">Agregar al Carrito</button>
+            </div>
+            <div class="product" data-price="10">
+                <img src="ruta/a/tu/imagen/crema-afeitar.jpg" alt="Imagen de Crema para afeitar" style="width:100px; height:auto;">
+                <p>Crema para afeitar - S/ 10</p>
+                <button onclick="addToCart('Crema para afeitar', 10)">Agregar al Carrito</button>
+            </div>
+            <!-- Agrega más productos de afeitado aquí -->
+        </div>
+    </div>
+    
+    <!-- Agrega más secciones aquí -->
+    
+    <script>
+        function addToCart(productName, price) {
+            console.log(`Producto: ${productName}, Precio: S/ ${price} añadido al carrito.`);
+            // Aquí puedes añadir la lógica para agregar el producto al carrito
+        }
+    </script>
+</body>
+</html>

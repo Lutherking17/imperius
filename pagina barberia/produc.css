@@ -1,0 +1,11 @@
+.product-list {
+    display: none;
+    margin-top: 10px;
+}
+.section {
+    margin-bottom: 20px;
+}
+.section button {
+    display: block;
+    width: 100%;
+    text-align: left;
